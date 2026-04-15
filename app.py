@@ -393,7 +393,7 @@ if uploaded:
 
         for r in results:
             sev_icon  = {"high":"🔴","medium":"🟡","low":"🟢"}.get(r["severity"],"⚪")
-            with st.expander(f"👷 {r['worker_id']} — {', '.join(VIOLATION_LABEL.get(v,v) for v in r['violation_types'])}", expanded=True):
+            with st.expander(f"👷 {r['worker_id']} — {', '.join(VIOLATION_LABEL.get(v,v) for v in r['violation_types'])} {sev_icon}", expanded=True):
                 col1, col2 = st.columns([1, 2])
 
                 with col1:
